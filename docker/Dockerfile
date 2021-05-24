@@ -17,5 +17,3 @@ RUN          apt-get install -y \
                  libuhd-dev libuhd3.15.0 uhd-host gnuradio
 
 RUN          uhd_images_downloader
-
-WORKDIR      /

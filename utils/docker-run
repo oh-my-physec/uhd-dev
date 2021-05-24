@@ -1,0 +1,9 @@
+#!/bin/bash
+
+docker run --rm -it \
+	--network host \
+	--ulimit rtprio=99 \
+	-e DISPLAY=$DISPLAY \
+	-v $HOME/.Xauthority:/root/.Xauthority \
+	-v $HOME/data:/root/data \
+	uhd-dev $@
