@@ -18,9 +18,9 @@
 
 - `matlab/`: 包含了用来读取 FileSink 文件的 MATLAB 函数.
 
-> __Note:__ 使用本仓库前, 请确保已经浏览过 [USRP Hardware Driver and USRP Manual](https://files.ettus.com/manual/page_usrp2.html).
-
 ### 构建镜像
+
+> __Note:__ 使用本仓库前, 请确保已经浏览过 [USRP Hardware Driver and USRP Manual](https://files.ettus.com/manual/page_usrp2.html).
 
 ```bash
 git clone https://github.com/oh-my-physec/uhd-dev
