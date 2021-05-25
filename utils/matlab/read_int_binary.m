@@ -27,11 +27,6 @@ function v = read_int_binary (filename, count)
   %%  signed integers
   %%
 
-  m = nargchk (1,2,nargin);
-  if (m)
-    usage (m);
-  end
-
   if (nargin < 2)
     count = Inf;
   end

@@ -27,11 +27,6 @@ function v = read_complex_binary (filename, count)
   %%  treating them as 32 bit complex numbers
   %%
 
-  m = nargchk (1,2,nargin);
-  if (m)
-    usage (m);
-  end
-
   if (nargin < 2)
     count = Inf;
   end
@@ -42,7 +37,7 @@ function v = read_complex_binary (filename, count)
   else
     t = fread (f, [2, count], 'float');
     fclose (f);
-    v = t(1,:) + t(2,:)*i;
+    v = t(1,:) + t(2,:)*1i;
     [r, c] = size (v);
     v = reshape (v, c, r);
   end

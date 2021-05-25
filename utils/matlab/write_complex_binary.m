@@ -25,12 +25,6 @@ function v = write_complex_binary (data, filename)
   %%
   %%  open filename and write data to it as 32 bit floats
   %%
-
-  m = nargchk (1,2,nargin);
-  if (m)
-    usage (m);
-  end
-
   f = fopen (filename, 'wb');
   if (f < 0)
     v = 0;
@@ -41,5 +35,5 @@ function v = write_complex_binary (data, filename)
     realdata = realdata';
     v = fwrite (f, realdata, 'float');
     fclose (f);
-  end;
+  end
 end
