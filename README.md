@@ -2,11 +2,25 @@
 
 > 一个拆箱可用的 [`UHD`](https://github.com/EttusResearch/uhd) + [`GNURadio`](https://www.gnuradio.org/) Docker 环境.
 
-## 如何使用
+### `docker/`
+
+包含了构建 docker 镜像的脚本.
+
+- `Dockerfile`
+
+### `utils/`
+
+包含了一些实用的脚本.
+
+- `adjust-network-kernel-settings`: 使用 USRP 过程中如果出现 Warning 可以运行该脚本修改网络参数.
+
+- `docker-run`: 帮助调用 docker 镜像内程序的脚本. 如: `docker-run uhd_usrp_probe`, `docker-run gnuradio-companion` 等.
+
+- `matlab/`: 包含了用来读取 FileSink 文件的 MATLAB 函数.
 
 > __Note:__ 使用本仓库前, 请确保已经浏览过 [USRP Hardware Driver and USRP Manual](https://files.ettus.com/manual/page_usrp2.html).
 
-### 编译镜像
+### 构建镜像
 
 ```bash
 git clone https://github.com/oh-my-physec/uhd-dev
@@ -22,13 +36,3 @@ uhd-dev      latest    37148a5000c7   About an hour ago   1.86GB
 ```
 
 至此, 镜像构建完成.
-
-### `docker-run`
-
-本仓库提供了一个脚本 ([`docker-run`](utils/docker-run)) 供用户调用 docker 内的程序.
-
-```bash
-$ docker-run uhd_usrp_probe
-```
-
-### 预装软件列表
